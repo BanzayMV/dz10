@@ -2,6 +2,21 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class RadioTest {
+    @Test
+    public void constructortest1() {
+        Radio rad = new Radio(30);
+        rad.setCurrentStation(29);
+
+        Assertions.assertEquals(30, rad.getAllStations());
+        Assertions.assertEquals(29, rad.getCurrentStation());
+    }
+
+    @Test
+    public void constructortest2() {
+        Radio rad = new Radio();
+        Assertions.assertEquals(10, rad.getAllStations());
+    }
+
 
     @Test
     public void setCurrentStationZero() {
